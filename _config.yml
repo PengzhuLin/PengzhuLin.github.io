@@ -8,6 +8,8 @@
 # Site Settings
 title                    : "Pengzhu LIN"
 description              : "Multiscale and AI-assisted modeling for energy storage and conversion"
+url                      : "https://pengzhulin.top"
+baseurl                  : ""
 repository               : "pengzhulin/pengzhulin.github.io"
 google_scholar_stats_use_cdn : true
 
