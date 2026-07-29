@@ -10,14 +10,29 @@ redirect_from:
   - /about.html
 ---
 
+{% if site.website_visibility == "public" %}
+
 <div class="home-shell">
 
-{% include_relative _pages/includes/intro.md %}
+{% include home/intro.md %}
 
-{% include_relative _pages/includes/news.md %}
+{% include home/news.md %}
 
-{% include_relative _pages/includes/pub_short.md %}
+{% include home/pub_short.md %}
 
-{% include_relative _pages/includes/others.md %}
+{% include home/others.md %}
 
 </div>
+
+{% else %}
+
+<section class="site-paused" aria-label="Website unavailable">
+  <div class="site-paused__inner">
+    <p class="site-paused__eyebrow">Pengzhu Lin</p>
+    <h1>Website temporarily unavailable</h1>
+    <p>This personal webpage is currently offline.</p>
+    <p>For correspondence, please contact <a href="mailto:mepengzhul@ust.hk">mepengzhul@ust.hk</a>.</p>
+  </div>
+</section>
+
+{% endif %}

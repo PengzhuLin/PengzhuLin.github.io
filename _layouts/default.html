@@ -9,7 +9,9 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body{% if page.classes %} class="{{ page.classes | join: ' ' }}"{% endif %}>
+  {% capture body_classes %}{% if page.classes %}{{ page.classes | join: ' ' }}{% endif %}{% if site.website_visibility == "hidden" %} site-hidden{% endif %}{% endcapture %}
+  {% assign body_classes = body_classes | strip %}
+  <body{% if body_classes != "" %} class="{{ body_classes }}"{% endif %}>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}

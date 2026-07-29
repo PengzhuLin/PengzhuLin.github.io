@@ -222,6 +222,60 @@ body.home .page__content a:hover {
     text-decoration: underline;
 }
 
+body.site-hidden .masthead,
+body.site-hidden .sidebar {
+    display: none;
+}
+
+body.site-hidden #main {
+    max-width: none;
+    min-height: 100vh;
+    padding: 0;
+}
+
+body.site-hidden .page,
+body.site-hidden .page__inner-wrap,
+body.site-hidden .page__content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.site-paused {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    color: #252525;
+    background: #f7f7f5;
+}
+
+.site-paused__inner {
+    width: 100%;
+    max-width: 520px;
+}
+
+.site-paused__eyebrow {
+    margin: 0 0 1.2rem;
+    color: #686868;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+body.home .page__content .site-paused h1 {
+    margin-bottom: 0.75rem;
+    font-size: 1.9rem;
+    line-height: 1.2;
+}
+
+.site-paused p {
+    margin: 0 0 0.65rem;
+    color: #4d4d4d;
+    font-size: 1rem;
+}
+
 body.home .page__content h1,
 body.home .page__content h2,
 body.home .page__content h3 {
